@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { API_URL, POSTER_URL } from './components/Urls.js';
 
 import MovieList from './components/MovieList';
 import MoviePage from './pages/MoviePage';
+import NotFound from './pages/NotFound';
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -14,6 +15,7 @@ export const App = () => {
       .then((data) => setMovies(data.results))
       .catch((err) => console.log(err));
   }, [apiUrl])
+  // console.log({setApiUrl});
   return (
     <BrowserRouter>
       <Switch>
@@ -33,6 +35,10 @@ export const App = () => {
         <Route path="/movie/:id" exact>
           <MoviePage movies={movies}/>
         </Route>
+        <Route path="/404" exact component='NotFound'>
+          <NotFound />
+        </Route>
+        <Redirect to="/404" />
       </Switch>
     </BrowserRouter>
   )

@@ -7,7 +7,7 @@ const MovieList = (props) => {
       <div className='description'>
         <p className='title'>{props.title}</p>
       </div>
-      <img className='poster' src={props.image} />
+      <img alt='poster' className='poster' src={props.image} />
     </Link>
   );
 };
