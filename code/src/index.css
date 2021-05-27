@@ -23,19 +23,33 @@ body {
 .movie-list .movie {
   position: relative;
   width: 25vw;
+  overflow: hidden;
 }
-.movie-list .movie .image {
+.movie-list .movie .poster {
   width: 100%;
   height: 100%;
+  z-index: 1;
+  transition: all .2s ease-in-out;
 }
 .movie-list .movie .description {
   position: absolute;
+  z-index: 10;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px;
-  color: #fff;
+  padding: 20px;
+  padding-bottom: 10px;
+  color: #ccc;
   font-size: 18px;
+  font-weight: 600;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%);
+}
+.movie-list .movie:hover .description {
+  color: #fff;
+}
+.movie-list .movie:hover .poster {
+  transform: scale(1.05);
 }
 .movie-wrapper {
   background-size: cover !important;
