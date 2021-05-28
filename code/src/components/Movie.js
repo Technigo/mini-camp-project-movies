@@ -5,7 +5,7 @@ import SimilarMovies from '../components/SimilarMovies';
 const Movie = (props) => {
   return (
     <div className='movie-content'>
-      <div className='movie-content-wrapper'>
+      <div className='movie-details-wrapper'>
         <img alt='poster' className='poster' src={props.poster} />
         <div className='description'>
           <p className='title'>{props.title}</p>

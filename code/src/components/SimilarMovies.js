@@ -18,22 +18,22 @@ const SimilarMovies = () => {
 
   if (similarMovies.length > 0) {
     return (
-      <div className='similar-movies-content'>
-        <ul className='similar-movies-content-wrapper'>
-          <h1>Similar Movies</h1>
+      <div className='similar-movies-wrapper'>
+        <h1>Similar Movies</h1>
+        <div className='similar-movies-list'>
           {similarMovies.map((similarMovie) => {
             return (
-              <li key={similarMovie.id}>
+              <div className='similar-movie' key={similarMovie.id}>
                 <Link to={`/movie/${similarMovie.id}`} className='similar-movie-link'>
                   <img alt='poster' className='poster' src={`${POSTER_URL}${similarMovie.poster_path}`} />
                   <div className='description'>
                     <p className='title'>{similarMovie.title}</p>
                   </div>
                 </Link>
-              </li>
+              </div>
             );
           })}
-        </ul>
+        </div>
       </div>
     );
   } else {
