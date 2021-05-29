@@ -21,11 +21,6 @@
       "modules": true
     }
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "plugins": [
     "react-hooks"
   ],
