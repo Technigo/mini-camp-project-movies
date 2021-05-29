@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { API_KEY, BACKDROP_URL, POSTER_URL } from '../components/Urls.js';
 import Movie from '../components/Movie';
@@ -21,15 +21,9 @@ const MoviePage = () => {
       })
   }, [params.id]);
 
-  console.log(movie.id)
-  console.log(params.id)
-
   if (movie.id) {
     return (
       <section className='movie-wrapper' style={{background: `url(${BACKDROP_URL}${movie.backdrop_path})`}}>
-        <Link to='/' className='link-back'>
-          <button type="button" className='button-back'></button>
-        </Link>
         <Movie
           id={movie.id}
           title={movie.title}

@@ -1,29 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, useHistory } from 'react-router-dom';
 import { API_URL, POSTER_URL } from './components/Urls.js';
 
-import MovieList from './components/MovieList';
+import MovieListPage from './pages/MovieListPage';
 import MoviePage from './pages/MoviePage';
 import NotFound from './pages/NotFound';
+import Header from './components/Header';
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
-  const [apiUrl, setApiUrl] = useState([API_URL]);
+  const [apiUrl, setApiUrl] = useState(API_URL);
+  const [filterValue, setFilterValue] = useState('popular');
+  const history = useHistory();
   useEffect(() => {
     fetch(`${apiUrl}`)
       .then((res) => res.json())
       .then((data) => setMovies(data.results))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => {
+        if (movies.length > 0) {
+          history.push('/');
+        }
+      });
   }, [apiUrl])
-  // console.log({setApiUrl});
   return (
-    <BrowserRouter>
+    <React.Fragment>
+      <Header setApiUrl={setApiUrl} setFilterValue={setFilterValue} filterValue={filterValue}/>
       <Switch>
         <Route path='/' exact>
         <div className='movie-list'>
           {movies.map((movie) => {
             return (
-              <MovieList
+              <MovieListPage
                 key={movie.id}
                 id={movie.id}
                 title={movie.title}
@@ -40,6 +48,6 @@ export const App = () => {
         </Route>
         <Redirect to="/404" />
       </Switch>
-    </BrowserRouter>
+    </React.Fragment>
   )
 }

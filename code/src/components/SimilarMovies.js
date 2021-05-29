@@ -14,7 +14,6 @@ const SimilarMovies = () => {
         setSimilarMovies(json.results);
       })
   }, []);
-  console.log(similarMovies);
 
   if (similarMovies.length > 0) {
     return (

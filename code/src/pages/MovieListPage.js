@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MovieList = (props) => {
+const MovieListPage = (props) => {
   return (
     <Link to={`/movie/${props.id}`} className='movie'>
       <div className='description'>
@@ -11,4 +11,4 @@ const MovieList = (props) => {
     </Link>
   );
 };
-export default MovieList;
+export default MovieListPage;
