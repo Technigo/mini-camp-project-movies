@@ -83,7 +83,7 @@ p {
 }
 .movie-list .movie {
   position: relative;
-  width: 25vw;
+  width: 25%;
   padding: 4px;
   overflow: hidden;
   border-radius: 2px;
@@ -264,7 +264,7 @@ p {
 
 .movie-wrapper .similar-movies-wrapper .similar-movie {
   position: relative;
-  width: 20vw;
+  width: 20%;
   overflow: hidden;
   padding: 4px;
   padding-bottom: 40px;
@@ -300,15 +300,15 @@ p {
 }
 @media only screen and (min-width: 1300px) {
   .movie-list .movie {
-    width: 20vw;
+    width: 20%;
   }
   .movie-wrapper .similar-movies-wrapper .similar-movie {
-    width: 20vw;
+    width: 20%;
   }
 }
 @media only screen and (max-width: 960px) {
   .movie-list .movie {
-    width: 33vw;
+    width: 33%;
   }
   .movie-wrapper .movie-content {
     top: 200px;
@@ -325,12 +325,12 @@ p {
     text-align: center;
   }
   .movie-wrapper .similar-movies-wrapper .similar-movie {
-    width: 25vw;
+    width: 25%;
   }
 }
 @media only screen and (max-width: 600px) {
   .movie-wrapper .similar-movies-wrapper .similar-movie {
-    width: 33vw;
+    width: 33%;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -339,7 +339,7 @@ p {
     width: 100%;
   }
   .movie-list .movie {
-    width: 50vw;
+    width: 50%;
   }
   .movie-wrapper .movie-content {
     top: 130px;
@@ -348,6 +348,6 @@ p {
     width: 300px;
   }
   .movie-wrapper .similar-movies-wrapper .similar-movie {
-    width: 50vw;
+    width: 50%;
   }
 }
