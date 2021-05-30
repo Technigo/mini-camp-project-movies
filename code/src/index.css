@@ -37,6 +37,8 @@ p {
   backdrop-filter: blur(18px);
   box-shadow: 0px 3px 3px rgba(0,0,0,.2);
   z-index: 20;
+  max-width: 2400px;
+  margin: 0 auto;
 }
 .header .select-filter {
   appearance: none;
