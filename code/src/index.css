@@ -298,6 +298,21 @@ p {
 .movie-wrapper .similar-movie:hover .poster {
   transform: scale(1.04);
 }
+.movie-wrapper .similar-movies-wrapper .similar-movies-list.scrollable {
+  height: auto;
+  overflow: scroll;
+  will-change: scroll-position;
+  cursor: grab;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden !important;
+}
+.movie-wrapper .similar-movies-wrapper .similar-movies-list.scrollable .similar-movie {
+  display: inline-block;
+  max-width: calc(19% - 3.75px);
+  flex: 0 0 100%;
+}
 @media only screen and (min-width: 1300px) {
   .movie-list .movie {
     width: 20%;
