@@ -23,7 +23,7 @@ const MoviePage = () => {
 
   if (movie.id) {
     return (
-      <section className='movie-wrapper' style={{background: `url(${BACKDROP_URL}${movie.backdrop_path})`}}>
+      <section className='movie-wrapper' style={{background: `url(${BACKDROP_URL}${movie.backdrop_path}) no-repeat top center`}}>
         <Movie
           id={movie.id}
           title={movie.title}
