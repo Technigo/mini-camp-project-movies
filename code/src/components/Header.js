@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { API_KEY } from '../components/Urls.js';
+import { API_KEY } from '../components/Urls';
 
 const Header = (props) => {
   const [filterValue, setFilterValue] = useState(props.filterValue);

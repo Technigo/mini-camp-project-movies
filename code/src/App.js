@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route, Redirect, useHistory } from 'react-router-dom';
-import { API_URL, POSTER_URL } from './components/Urls.js';
+import { API_URL, POSTER_URL } from './components/Urls';
 
 import MovieListPage from './pages/MovieListPage';
 import MoviePage from './pages/MoviePage';
@@ -43,7 +43,7 @@ export const App = () => {
         <Route path="/movie/:id" exact>
           <MoviePage movies={movies}/>
         </Route>
-        <Route path="/404" exact component='NotFound'>
+        <Route path="/404" exact>
           <NotFound />
         </Route>
         <Redirect to="/404" />

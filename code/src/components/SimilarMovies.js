@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { API_KEY, POSTER_URL } from '../components/Urls.js';
 import { useParams, Link } from "react-router-dom";
+import { API_KEY, POSTER_URL } from '../components/Urls';
 
 const SimilarMovies = () => {
   const [similarMovies, setSimilarMovies] = useState([]);

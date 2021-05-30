@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Redirect } from 'react-router-dom';
 import { useParams } from "react-router-dom";
-import { API_KEY, BACKDROP_URL, POSTER_URL } from '../components/Urls.js';
+import { API_KEY, BACKDROP_URL, POSTER_URL } from '../components/Urls';
+
 import Movie from '../components/Movie';
 import Loading from '../components/Loading';
 
