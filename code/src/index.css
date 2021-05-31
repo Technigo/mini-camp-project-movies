@@ -133,6 +133,15 @@ p {
   overflow: hidden;
   background: #000;
 }
+.movie-wrapper:after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 300px;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+}
 .loading-wrapper {
   margin: 0;
   width: 600px;
@@ -197,11 +206,12 @@ p {
 }
 .movie-wrapper .movie-content {
   position: absolute;
-  top: 430px;
+  top: 300px;
   left: 0;
   right: 0;
   max-width: 2400px;
   margin: 0 auto;
+  z-index: 2;
 }
 .movie-wrapper .movie-details-wrapper {
   position: relative;
@@ -267,7 +277,7 @@ p {
 }
 .movie-wrapper .similar-movies-wrapper h1 {
   color: #fff;
-  padding-left: 10px;
+  padding-left: 30px;
 }
 
 .movie-wrapper .similar-movies-wrapper .similar-movie {
