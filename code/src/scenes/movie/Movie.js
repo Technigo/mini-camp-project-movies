@@ -28,7 +28,7 @@ export const Movie = () => {
                 setMovie(jsonData);
                 setLoading(false);
             });
-    }, [id]);
+    }, [id, movieUrl]);
 
     return (
         <>
